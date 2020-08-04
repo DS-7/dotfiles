@@ -18,8 +18,8 @@ export PATH="$INSTPATH/bin:$PATH"
 echo "python 3.8.*" > "$INSTPATH/conda-meta/pinned"
 
 # Install Anaconda packages for Python 3.x
-mv $HERE/DS.yml.txt $HERE/environment.yml
-conda env create -f $HERE/environment.yml
+#mv $HERE/DS.yml.txt $HERE/environment.yml
+conda env create -f $HERE/DS-networks.yml
 
 $HOME/$CONDA/envs/DS/bin/python -m ipykernel install --prefix=$HOME/$CONDA/envs/JupyterSystemEnv --name 'conda_DS'
 
