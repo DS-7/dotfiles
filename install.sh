@@ -20,7 +20,7 @@ echo "python 3.8.*" > "$INSTPATH/conda-meta/pinned"
 mv $HERE/DS.yml.txt $HERE/environment.yml
 conda env create -f $HERE/environment.yml
 
-#$HOME/anaconda3/envs/DS/bin/python -m ipykernel install --prefix=$HOME/anaconda3/envs/JupyterSystemEnv --name 'conda_DS'
+$HOME/anaconda3_501/envs/DS/bin/python -m ipykernel install --prefix=$HOME/anaconda3_501/envs/JupyterSystemEnv --name 'conda_DS'
 
 # Use this to determine frozen versions
 # conda install -y --file "$HERE/pkgs.txt"
