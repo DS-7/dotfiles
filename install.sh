@@ -10,11 +10,11 @@ curl -Lo "inst.sh" \
 bash "inst.sh" -b -f -p "$INSTPATH" && rm -f "inst.sh"
 export PATH="$INSTPATH/bin:$PATH"
 
-conda config --append "channels" "conda-forge"
-conda config --append "channels" "pytorch"
+#conda config --append "channels" "conda-forge"
+#conda config --append "channels" "pytorch"
 
 # Pin the python version to avoid major updates on new package installs
-echo "python 3.6.*" > "$INSTPATH/conda-meta/pinned"
+echo "python 3.8.*" > "$INSTPATH/conda-meta/pinned"
 
 # Install Anaconda packages for Python 3.x
 
