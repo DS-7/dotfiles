@@ -6,7 +6,7 @@ set -xeu pipefail
 # Download and Install Anaconda 3 v5.3.0
 INSTPATH="$HOME/anaconda3_501"
 curl -Lo "inst.sh" \
-     "https://repo.continuum.io/archive/Anaconda3-5.3.0-Linux-x86_64.sh"
+     "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 bash "inst.sh" -b -f -p "$INSTPATH" && rm -f "inst.sh"
 export PATH="$INSTPATH/bin:$PATH"
 
