@@ -18,10 +18,12 @@ echo "python 3.8.*" > "$INSTPATH/conda-meta/pinned"
 
 # Install Anaconda packages for Python 3.x
 
+conda env create -f environment.yml
+
 # Use this to determine frozen versions
 # conda install -y --file "$HERE/pkgs.txt"
 
-conda install -y --no-deps --file "$HERE/pkgs.txt"
+#conda install -y --no-deps --file "$HERE/pkgs.txt"
 
 pip install --upgrade "pip"
 pip install --upgrade "setuptools" --ignore-installed
