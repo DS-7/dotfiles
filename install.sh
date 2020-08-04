@@ -101,6 +101,6 @@ conda env create -f environment.yml
 
 conda clean --verbose -ay
 
-ln -s "$INSTPATH/bin/python" "$HOME/.local/bin/python36"
+ln -s "$INSTPATH/bin/python" "$HOME/.local/bin/python38"
 
 rm -rf "$HOME/.cache/pip"
