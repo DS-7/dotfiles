@@ -3,8 +3,9 @@
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 set -xeu pipefail
 
-# Download and Install Anaconda 3 v5.3.0
-INSTPATH="$HOME/anaconda3_501"
+# Download and Install Miniconda
+CONDA='miniconda3_483'
+INSTPATH="$HOME/$CONDA"
 curl -Lo "inst.sh" \
      "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 bash "inst.sh" -b -f -p "$INSTPATH" && rm -f "inst.sh"
@@ -20,7 +21,7 @@ echo "python 3.8.*" > "$INSTPATH/conda-meta/pinned"
 mv $HERE/DS.yml.txt $HERE/environment.yml
 conda env create -f $HERE/environment.yml
 
-$HOME/anaconda3_501/envs/DS/bin/python -m ipykernel install --prefix=$HOME/anaconda3_501/envs/JupyterSystemEnv --name 'conda_DS'
+$HOME/$CONDA/envs/DS/bin/python -m ipykernel install --prefix=$HOME/$CONDA/envs/JupyterSystemEnv --name 'conda_DS'
 
 # Use this to determine frozen versions
 # conda install -y --file "$HERE/pkgs.txt"
