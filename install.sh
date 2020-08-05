@@ -20,6 +20,10 @@ conda env create -f $HERE/DS-networks.yml
 
 $HOME/$CONDA/envs/DS/bin/python -m ipykernel install --prefix=$HOME/$CONDA/envs/JupyterSystemEnv --name 'conda_DS'
 
+# Download modules
+wget -P $HOME/$CONDA/envs/DS/lib/python3.8/site-packages https://raw.githubusercontent.com/DS-tukey/Modules/master/network_analysis.py 
+wget -P $HOME/$CONDA/envs/DS/lib/python3.8/site-packages https://raw.githubusercontent.com/DS-tukey/Modules/master/plotting.py
+
 conda clean --verbose -ay
 
 ln -s "$INSTPATH/bin/python" "$HOME/.local/bin/python38"
