@@ -1,6 +1,7 @@
 name: DS
 
 dependencies:
+  - python=3.8.5
   - ipykernel=5.3
 #  - matplotlib=3.1
 #  - pandas=0.25
